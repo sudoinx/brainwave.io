@@ -70,6 +70,31 @@ header {
   letter-spacing: -0.01em;
   color: #161c2d;
   margin-right: 50px;
+  transition: transform 500ms ease;
+
+  color: #19191b;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav a:hover {
+  transform: scale(1.05);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #473bf0;
+  transition: width 0.3s ease-out;
+}
+
+.nav a:hover::after {
+  width: 100%;
 }
 
 .header-button a {
@@ -758,6 +783,10 @@ header {
   color: #161c2d;
 }
 
+.footer-navigation-company a:hover {
+  opacity: 0.7;
+}
+
 .footer-navigation-product p {
   margin-bottom: 20px;
   font-weight: 400;
@@ -765,6 +794,10 @@ header {
   line-height: 1.73333;
   letter-spacing: -0.01em;
   color: #161c2d;
+}
+
+.footer-navigation-product a:hover {
+  opacity: 0.7;
 }
 
 .footer-navigation-services p {
@@ -776,6 +809,10 @@ header {
   color: #161c2d;
 }
 
+.footer-navigation-services a:hover {
+  opacity: 0.7;
+}
+
 .footer-navigation-legal p {
   margin-bottom: 20px;
   font-weight: 400;
@@ -783,6 +820,10 @@ header {
   line-height: 1.73333;
   letter-spacing: -0.01em;
   color: #161c2d;
+}
+
+.footer-navigation-legal a:hover {
+  opacity: 0.7;
 }
 
 .footer-navigation a {
