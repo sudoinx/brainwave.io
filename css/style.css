@@ -84,6 +84,12 @@ header {
   border-radius: 8px;
   width: 158px;
   display: block;
+  transition: all 500ms ease-in-out;
+}
+
+.header-button a:hover {
+  background-color: #4942a1;
+  transform: scale(1.05);
 }
 
 .hero-content {
@@ -136,6 +142,12 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: all 500ms ease-in-out;
+}
+
+.buttons-hero .blue:hover {
+  background-color: #4942a1;
+  transform: scale(1.05);
 }
 
 .buttons-hero a {
@@ -238,6 +250,12 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: all 500ms ease-in-out;
+}
+
+.block-one-left a:hover {
+  transform: scale(1.05);
+  background-color: #4942a1;
 }
 
 .block-one-left a img {
@@ -526,6 +544,12 @@ header {
   border-radius: 8px;
   width: 318px;
   display: block;
+  transition: transform 500ms ease-in-out;
+}
+
+.pricing-card a:hover {
+  background-color: #4942a1;
+  transform: scale(1.05);
 }
 
 .choice-plan {
@@ -661,6 +685,12 @@ header {
   border-radius: 8px;
   background-color: rgba(71, 59, 240, 0.08);
   margin-right: 20px;
+  transition: transform 500ms ease-in-out;
+}
+
+.cta-buttons .btn-blue:hover {
+  transform: scale(1.05);
+  background-color: #e0dfdf;
 }
 
 .cta-buttons .btn-white {
@@ -675,6 +705,12 @@ header {
   justify-content: center;
   background-color: #473bf0;
   border-radius: 8px;
+  transition: transform 500ms ease-in-out;
+}
+
+.cta-buttons .btn-white:hover {
+  transform: scale(1.05);
+  background-color: #4942a1;
 }
 
 .footer {
