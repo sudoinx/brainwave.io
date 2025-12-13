@@ -38,15 +38,15 @@ p {
   opacity: 0.7;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 header {
@@ -243,7 +243,10 @@ header {
 }
 
 .buttons-hero .blue img {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 32px;
 }
 
 .hero-cards {
@@ -348,9 +351,23 @@ header {
 }
 
 .facts {
-  background-color: #fcfdfe;
-  height: 134px;
   padding: 0 288px;
+}
+
+.facts::after {
+  content: "";
+  position: absolute;
+  left: 288px;
+  right: 288px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 1px solid #e7e9ed;
+  width: calc(100% - 576px);
+}
+
+.facts-inner {
+  position: relative;
+  height: 100%;
 }
 
 .facts-cards {
@@ -828,11 +845,11 @@ header {
   margin-bottom: 40px;
 }
 
-.icons-footer {
+/* .icons-footer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-}
+} */
 
 .icons-footer a {
   margin-right: 23px;
@@ -840,6 +857,11 @@ header {
 
 .icons-footer a:last-child {
   margin-right: 0;
+}
+
+.line-footer {
+  border: 1px solid #e7e9ed;
+  width: 100%;
 }
 
 .footer-navigation-company p {
@@ -1046,12 +1068,14 @@ header {
   }
 
   .hero-card img {
-    object-fit: contain;
+    width: auto;
+    height: auto;
   }
 
   .block-one-inner {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .block-one-left {
@@ -1083,9 +1107,10 @@ header {
 
   .block-one-left a {
     order: 4;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    align-self: flex-start;
     background-color: #473bf0;
     border-radius: 8px;
     font-weight: 700;
@@ -1094,9 +1119,10 @@ header {
     letter-spacing: -0.04em;
     color: #fff;
     padding: 13px 20px 14px 21px;
-    width: 100%;
-    max-width: 280px;
     transition: all 500ms ease-in-out;
+    width: auto;
+    margin-left: 0;
+    margin-right: auto;
   }
 
   .block-one-left a:hover {
@@ -1105,13 +1131,23 @@ header {
   }
 
   .block-one-left a img {
-    padding-left: 20px;
+    padding-left: 12px;
+  }
+
+  /* Уменьшаем отступ стрелки в других кнопках на планшете */
+  .cta-buttons .btn-blue img,
+  .cta-buttons .btn-white img {
+    padding-left: 12px;
   }
 
   /* Facts */
   .facts {
     height: auto;
     padding: 60px 40px;
+  }
+
+  .facts::after {
+    display: none;
   }
 
   .facts-cards {
@@ -1419,6 +1455,10 @@ header {
     margin-right: 0;
   }
 
+  .buttons-hero .blue img {
+    display: none;
+  }
+
   .hero-cards {
     flex-direction: column;
     padding: 0;
@@ -1442,6 +1482,7 @@ header {
   .block-one-inner {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .block-one-left {
@@ -1468,7 +1509,8 @@ header {
   }
 
   .hero-card img {
-    object-fit: contain;
+    width: auto;
+    height: auto;
   }
 
   .block-one-right {
@@ -1479,9 +1521,10 @@ header {
 
   .block-one-left a {
     order: 4;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    align-self: flex-start;
     background-color: #473bf0;
     border-radius: 8px;
     font-weight: 700;
@@ -1490,9 +1533,10 @@ header {
     letter-spacing: -0.04em;
     color: #fff;
     padding: 12px 18px 13px 18px;
-    width: 100%;
-    max-width: 280px;
     transition: all 500ms ease-in-out;
+    width: auto;
+    margin-left: 0;
+    margin-right: auto;
   }
 
   .block-one-left a:hover {
@@ -1501,7 +1545,13 @@ header {
   }
 
   .block-one-left a img {
-    padding-left: 15px;
+    padding-left: 10px;
+  }
+
+  /* Уменьшаем отступ стрелки в других кнопках на телефоне */
+  .cta-buttons .btn-blue img,
+  .cta-buttons .btn-white img {
+    padding-left: 10px;
   }
 
   /* Facts */
@@ -1512,6 +1562,10 @@ header {
   .facts-cards {
     padding: 30px 15px;
     gap: 25px;
+  }
+
+  .facts::after {
+    display: none;
   }
 
   .facts-card {
@@ -1794,5 +1848,13 @@ header {
 
   .block-one-left a {
     display: inline-flex !important;
+  }
+
+  /* Показываем line-footer на десктопе и выравниваем по центру */
+  .line-footer {
+    display: block !important;
+    margin: 0 auto !important;
+    padding: 0 288px; /* Такой же padding как в .facts */
+    box-sizing: border-box;
   }
 }
