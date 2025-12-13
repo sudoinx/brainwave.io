@@ -354,16 +354,6 @@ header {
   padding: 0 288px;
 }
 
-.facts::after {
-  content: "";
-  position: absolute;
-  left: 288px;
-  right: 288px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-top: 1px solid #e7e9ed;
-  width: calc(100% - 576px);
-}
 
 .facts-inner {
   position: relative;
@@ -1146,10 +1136,6 @@ header {
     padding: 60px 40px;
   }
 
-  .facts::after {
-    display: none;
-  }
-
   .facts-cards {
     flex-direction: column;
     padding: 40px 20px;
@@ -1562,10 +1548,6 @@ header {
   .facts-cards {
     padding: 30px 15px;
     gap: 25px;
-  }
-
-  .facts::after {
-    display: none;
   }
 
   .facts-card {
