@@ -14,11 +14,20 @@
             <a href="#">Brainwave.io</a>
           </div>
 
-          <nav class="nav">
+          <button class="burger-menu" id="burgerMenu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="nav" id="nav">
             <a href="#">Demos</a>
             <a href="#">Pages</a>
             <a href="#">Support</a>
             <a href="#">Contact</a>
+            <div class="header-button-mobile">
+              <a href="#">Get started free</a>
+            </div>
           </nav>
 
           <div class="header-button">
@@ -454,5 +463,36 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Бургер-меню
+      const burgerMenu = document.getElementById('burgerMenu');
+      const nav = document.getElementById('nav');
+
+      if (burgerMenu && nav) {
+        burgerMenu.addEventListener('click', function() {
+          burgerMenu.classList.toggle('active');
+          nav.classList.toggle('active');
+        });
+
+        // Закрытие меню при клике на ссылку
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            if (window.innerWidth <= 1024) {
+              burgerMenu.classList.remove('active');
+              nav.classList.remove('active');
+            }
+          });
+        });
+
+        // Закрытие меню при изменении размера окна (если перешли на десктоп)
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 1024) {
+            burgerMenu.classList.remove('active');
+            nav.classList.remove('active');
+          }
+        });
+      }
+    </script>
   </body>
 </html>
