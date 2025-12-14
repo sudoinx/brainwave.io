@@ -354,7 +354,6 @@ header {
   padding: 0 288px;
 }
 
-
 .facts-inner {
   position: relative;
   height: 100%;
@@ -835,14 +834,10 @@ header {
   margin-bottom: 40px;
 }
 
-/* .icons-footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-} */
-
 .icons-footer a {
   margin-right: 23px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .icons-footer a:last-child {
@@ -1299,7 +1294,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    width: 100%;
+    width: 65%;
   }
 
   .icons-footer a {
@@ -1716,6 +1711,9 @@ header {
   .footer-logo {
     width: 100%;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-logo h1 {
@@ -1754,11 +1752,25 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
-    width: 100%;
+    width: 65%;
+    margin: 0 auto;
   }
 
   .icons-footer a {
     margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
+  }
+
+  .icons-footer a img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
   }
 }
 
